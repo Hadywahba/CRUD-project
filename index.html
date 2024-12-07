@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- !fontawsome stylesheet -->
+     <link rel="stylesheet" href="css/all.min.css">
+     <!-- * bootstrap stylesheet -->
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <!-- & css stylesheet -->
+       <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="container my-5">
+        <div class="w-75 mx-auto">
+            <div class="col-lg">
+                <h1 class="text-white mb-4">product management system</h1>
+                <div class="form-floating mb-4">
+                    
+                  <input oninput="validation(this)"  type="text" class="form-control " id="productName" placeholder="productName">
+                  <div class="alert alert-info d-none">
+                    <small> you have something wrong in the name please check it !!📢📢</small>
+                  </div>
+                    <label for="productName">product Name : </label>
+                  </div>
+                  <div class="form-floating mb-4">
+                    <input oninput="validation(this)"  type="number"  class="form-control" id="productPrice" placeholder="productPrice">
+                    <div class="alert alert-warning d-none">
+                      <small> you have something wrong in the Price please check it !!📢📢</small>
+                    </div>
+                    <label for="productPrice">product Price : </label>
+                  </div>
+                  <div class="form-floating mb-4">
+                    <input oninput="validation(this)" list="Category" type="text" class="form-control " id="productCategory" placeholder="productCategory">
+                    <div class="alert alert-success d-none">
+                      <small> you have something wrong in the Category please check it !!📢📢</small>
+                    </div>
+                    <label for="productCategory"> product Category : </label>
+                  <datalist id="Category">
+                    <option value="TV"></option>
+                    <option value="Mobile"></option>
+                    <option value="Laptop"></option>
+                    <option value="Tab"></option>
+                  </datalist>
+                  </div>
+                  <div class="form-floating mb-4">
+                    <textarea oninput="validation(this)" class="form-control" name="productdescription" id="productdescription" placeholder="productdescription"></textarea>
+                    <div class="alert alert-danger d-none">
+                      <small> you have something wrong in the discription please check it !!📢📢</small>
+                    </div>
+                    <label for="productdescription">product discription : </label>
+                  </div>
+                  <div class="form-floating mb-4">
+                    <input type="file" class="form-control" id="productImage" placeholder="productImage">
+                    <label for="productImage">product Image : </label>
+                  </div>
+                  <button disabled id="btnAdd"  onclick="addProduct()" class="  btn btn-danger mx-3">Add product</button>
+                  <button onclick="UpdateProduct()" id="btnUpdate"  class="btn btn-info mx-3 d-none">update product</button>
+            </div>
+        </div>
+
+    </div>
+    
+    <div class="container">
+      <div class="form-floating mb-4">
+        <input oninput="search(this.value)" type="text" class="form-control " id="productSearch" placeholder="productSearch">
+        <label for="productSearch"> product Search : </label>
+      </div>
+      <div class="row gy-4" id="myData">
+       
+      </div>
+    </div>
+
+
+
+
+    <!-- ^ js stylesheet -->
+     <script src="js/main.js"></script>
+    
+</body>
+</html>
